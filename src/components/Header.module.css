@@ -1,0 +1,33 @@
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--gray-700);
+    height: 12.5rem;
+    margin: 0px;
+}
+
+.header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 3.026rem;
+    
+    margin-left: 0.75rem;
+    color: var(--purple-dark);
+}
+
+.header p > span {
+    color: var(--blue);
+}

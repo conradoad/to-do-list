@@ -1,0 +1,65 @@
+.inputTask {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: -1.6875rem;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputTask input {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
+
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 39.875rem;
+    height: 3.375rem;
+    box-sizing: border-box;
+    margin-right: 8px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 5.625rem;
+    padding: 1rem;
+
+    background-color: var(--blue-dark);
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+}
+
+.button span {
+    width: 2.125rem;
+    height: 1.25rem;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.875;
+    line-height: 1.225rem;
+
+    color: var(--gray-100);
+
+    margin-right: 0.75rem;
+
+    box-sizing: border-box;
+}

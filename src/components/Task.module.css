@@ -1,0 +1,79 @@
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 1rem;
+    border: 1px solid var(--gray-400);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+
+    background-color: var(--gray-500);
+
+    box-sizing: border-box;
+    height: 4.5rem;
+
+    user-select: none;
+
+}
+
+.checkBox {
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    transition-duration: 200ms;
+    cursor: pointer;
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.taskDone .checkBox {
+    background-image: url("../assets/checked.svg");
+}
+.taskDone .checkBox:hover {
+    background-image: url("../assets/checked_hover.svg");
+}
+.taskUndone .checkBox {
+    opacity: 0.9;
+    background-image: url("../assets/unchecked.svg");
+}
+.taskUndone .checkBox:hover {
+    background-image: url("../assets/unchecked_hover.svg");
+}
+
+
+.description {
+    box-sizing: border-box;
+    flex-grow: 1;
+
+    height: 2.5rem;
+    margin: 0 0.875rem;
+
+    font-size: 0.875rem;
+    line-height: 140%;
+    color: var(--gray-100);
+
+    user-select: text;
+}
+.taskDone .description {
+    text-decoration-line: line-through;
+    color: var(--gray-300);
+}
+
+
+.deleteButton {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+
+    transition-duration: 200ms;
+    cursor: pointer;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../assets/trash.svg');
+}
+.deleteButton:hover{
+    background-image: url('../assets/trash_hover.svg');
+}

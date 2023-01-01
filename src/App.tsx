@@ -1,5 +1,6 @@
 import { Header } from './components/Header'
 import { Input } from './components/Input'
+import { TasksBlock } from './components/TasksBlock'
 
 import './global.css'
 
@@ -9,6 +10,7 @@ export function App() {
     <div className="App">
       <Header />
       <Input />
+      <TasksBlock />
     </div>
   )
 }

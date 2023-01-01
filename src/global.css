@@ -13,10 +13,15 @@
   --danger: #E25858;
 }
 
+:focus {
+  outline: transparent;
+}
 
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--gray-600);
   padding: 0px;
   margin: 0px;
+
+  user-select: none;
 }

@@ -4,9 +4,13 @@ import clipboard_img from '../assets/clipboard.svg'
 import ITask from '../interfaces/ITask'
 import { Task } from './Task'
 
-export function TasksList( props: { tasks: ITask[] } ) {
+interface TasksListProps {
+    tasks: ITask[],
+    onToggleTask: (taskId: number) => void,
+    onDeleteTask: (taskId: number) => void,
+}
 
-    const tasks = props.tasks;
+export function TasksList({ tasks, onToggleTask, onDeleteTask }: TasksListProps){
 
     let content = [<></>];
 
@@ -23,7 +27,13 @@ export function TasksList( props: { tasks: ITask[] } ) {
     }
     else {
         content = tasks.map(task => {
-            return <li key={task.id}> <Task task={task} /></li>
+            return (
+                <li key={task.id}>
+                    <Task 
+                        task={task}
+                        onToggleTask={onToggleTask}
+                        onDeleteTask={onDeleteTask} />
+                </li>)
         })
     }
 

@@ -1,22 +1,15 @@
-import { useState } from 'react';
-
 import styles from './TasksBlock.module.css'
 import { TasksList } from './TasksList.';
 import ITask from '../interfaces/ITask'
-import { defineConfig } from 'vite';
+
+interface TasksBlockProps {
+    tasks: ITask[],
+    onToggleTask: (taskId: number) => void,
+    onDeleteTask: (taskId: number) => void,
+}
 
 
-export function TasksBlock() {
-
-    const tasksInitialState: ITask[] = [
-        {id: 1, description: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.', done: false},
-        {id: 2, description: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.', done: true},
-        {id: 3, description: 'Cccccc', done: false},
-    ];
-
-    // const tasksInitialState: ITask[] = [];
-
-    const [ tasks, setTasks ] = useState(tasksInitialState);
+export function TasksBlock({ tasks, onToggleTask, onDeleteTask }: TasksBlockProps) {
 
     return (
         <div className={styles.tasksBlock}>
@@ -39,7 +32,10 @@ export function TasksBlock() {
 
                 </div>
 
-                <TasksList tasks={tasks} />
+                <TasksList
+                    tasks={tasks}
+                    onToggleTask={onToggleTask}
+                    onDeleteTask={onDeleteTask} />
             </div>
         </div>
     )
